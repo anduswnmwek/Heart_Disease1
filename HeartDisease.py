@@ -1,3 +1,8 @@
+import pandas as pd
+import joblib
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
 import streamlit as st
 # Title and description
 st.title("Heart Disease Prediction App")
