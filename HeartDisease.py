@@ -1,0 +1,86 @@
+
+# Title and description
+st.title("Heart Disease Prediction App")
+st.write("This app predicts heart disease likelihood based on input features from preprocessed data.")
+
+# Load the trained model
+model_path = '/Users/abrahamvarghese/Downloads/heart_disease_model1.pkl'
+logreg = joblib.load(model_path)
+conf_matrix_image = '/Users/abrahamvarghese/Downloads/cm.png'
+image = '/Users/abrahamvarghese/Downloads/plot.png'
+# Sidebar for user input features
+st.sidebar.header("User Input Features")
+
+def user_input_features():
+    age = st.sidebar.slider('Age (Normalized)', 0.0, 1.0, 0.5)
+    sex = st.sidebar.selectbox('Sex_2 (0: Female, 1: Male)', [0.0, 1.0])
+    if sex == 'Male':
+        sex_1 = 1.0
+        sex_2 = 0.0
+    else:
+        sex_1 = 0.0
+        sex_2 = 1.0
+    chest_pain = st.sidebar.slider('Chest Pain Type (0-1 normalized)', 0.0, 1.0, 0.5)
+    fasting_bs = st.sidebar.selectbox('Fasting Blood Sugar > 120 mg/dl (0: No, 1: Yes)', [0.0, 1.0])
+    resting_ecg = st.sidebar.selectbox('Resting Electrocardiographic Results (0-1 normalized)', [0.0, 1.0])
+    max_hr = st.sidebar.slider('Max Heart Rate Achieved (Normalized)', 0.0, 1.0, 0.5)
+    exercise_angina = st.sidebar.selectbox('Exercise Angina_1 (0: No, 1: Yes)', [0.0, 1.0])
+    if exercise_angina == 'Yes':
+        exercise_angina_1 = 1.0
+        exercise_angina_2 = 0.0
+    else:
+        exercise_angina_1 = 0.0
+        exercise_angina_2 = 1.0
+    oldpeak = st.sidebar.slider('ST Depression Induced by Exercise (Normalized)', 0.0, 1.0, 0.5)
+    st_slope = st.sidebar.slider('ST Slope (0-1 normalized)', 0.0, 1.0, 0.5)
+    diastolic_bp = st.sidebar.slider('Diastolic Resting BP (Normalized)', 0.0, 1.0, 0.5)
+    resting_bp_cat = st.sidebar.slider('Resting BP Category (Normalized)', 0.0, 1.0, 0.5)
+    chol_cat = st.sidebar.slider('Cholesterol Category (Normalized)', 0.0, 1.0, 0.5)
+    
+    data = {
+        'Age': age,
+        'Sex1': sex_1,
+        'Sex2': sex_2,
+        'ChestPainType': chest_pain,
+        'FastingBS': fasting_bs,
+        'RestingECG': resting_ecg,
+        'MaxHR': max_hr,
+        'ExerciseAngina1': exercise_angina_1,
+        'ExerciseAngina2': exercise_angina_2,
+        'Oldpeak': oldpeak,
+        'ST_Slope': st_slope,
+        'Diastolic_RestingBP': diastolic_bp,
+        'RestingBP_Category': resting_bp_cat,
+        'Cholesterol_Category': chol_cat
+    }
+    features = pd.DataFrame(data, index=[0])
+    return features
+
+input_df = user_input_features()
+
+# Display the user inputs in the main area
+st.subheader('User Input Features')
+st.write(input_df)
+
+# Make predictions using the loaded model
+prediction = logreg.predict(input_df)
+prediction_proba = logreg.predict_proba(input_df)
+
+st.subheader('Prediction')
+if prediction == 1:
+    st.write("The model predicts that you may have heart disease.")
+else:
+    st.write("The model predicts that you are not likely to have heart disease.")
+
+# Display the prediction probability
+st.write(f"Prediction probability: {prediction_proba[0][1] * 100:.2f}% likelihood of heart disease")
+
+# Performance and Visualization sections (kept as placeholders)
+st.subheader('Model Performance')
+image = Image.open(image)
+st.image(image, use_column_width=True)
+
+# Confusion Matrix Visualization (Optional)
+st.subheader('Confusion Matrix')
+image = Image.open(conf_matrix_image)
+st.image(image, use_column_width=True)
