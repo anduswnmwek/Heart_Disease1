@@ -9,7 +9,7 @@ st.title("Heart Disease Prediction App")
 st.write("This app predicts heart disease likelihood based on input features from preprocessed data.")
 
 # Load the trained model
-model_path = '/Users/abrahamvarghese/Downloads/heart_disease_model1.pkl'
+model_path = 'heart_disease_model1.pkl'
 logreg = joblib.load(model_path)
 conf_matrix_image = '/Users/abrahamvarghese/Downloads/cm.png'
 image = '/Users/abrahamvarghese/Downloads/plot.png'
