@@ -1,5 +1,6 @@
 pandas 
 joblib
 matplotlib
-numpy  
+numpy
+Pillow
 Streamlit
