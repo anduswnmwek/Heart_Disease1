@@ -4,4 +4,4 @@ matplotlib
 numpy
 Pillow
 Streamlit
-sklearn
+scikit-learn
