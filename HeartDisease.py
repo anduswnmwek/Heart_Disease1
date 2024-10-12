@@ -7,7 +7,7 @@ import streamlit as st
 # Title and description
 st.title("Heart Disease Prediction App")
 st.write("This app predicts heart disease likelihood based on input features from preprocessed data.")
-st.write("<b>  Done by Juhan , Ryan ,Shaurya ,kaushiki <b> " )
+st.write("\033[1m Done by Juhan , Ryan ,Shaurya ,kaushiki \033[0m  " )
 # Load the trained model
 model_path = 'heart_disease_model1.pkl'
 logreg = joblib.load(model_path)
