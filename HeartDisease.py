@@ -11,8 +11,8 @@ st.write("This app predicts heart disease likelihood based on input features fro
 # Load the trained model
 model_path = 'heart_disease_model1.pkl'
 logreg = joblib.load(model_path)
-conf_matrix_image = '/Users/abrahamvarghese/Downloads/cm.png'
-image = '/Users/abrahamvarghese/Downloads/plot.png'
+conf_matrix_image = 'cm.png'
+image = 'plot.png'
 # Sidebar for user input features
 st.sidebar.header("User Input Features")
 
