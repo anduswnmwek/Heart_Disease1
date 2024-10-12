@@ -44,14 +44,14 @@ def user_input_features():
     
     data = {
         'Age': age,
-        'Sex1': sex_1,
-        'Sex2': sex_2,
+        'Sex_1': sex_1,
+        'Sex_2': sex_2,
         'ChestPainType': chest_pain,
         'FastingBS': fasting_bs,
         'RestingECG': resting_ecg,
         'MaxHR': max_hr,
-        'ExerciseAngina1': exercise_angina_1,
-        'ExerciseAngina2': exercise_angina_2,
+        'ExerciseAngina_1': exercise_angina_1,
+        'ExerciseAngina_2': exercise_angina_2,
         'Oldpeak': oldpeak,
         'ST_Slope': st_slope,
         'Diastolic_RestingBP': diastolic_bp,
