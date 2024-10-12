@@ -1,4 +1,4 @@
-
+import streamlit as st
 # Title and description
 st.title("Heart Disease Prediction App")
 st.write("This app predicts heart disease likelihood based on input features from preprocessed data.")
