@@ -1,6 +1,6 @@
 pandas 
 joblib
-matplotlib.pyplot 
+matplotlib
 numpy 
 PIL 
 Streamlit
