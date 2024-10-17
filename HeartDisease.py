@@ -80,12 +80,3 @@ else:
 # Display the prediction probability
 st.write(f"Prediction probability: {prediction_proba[0][1] * 100:.2f}% likelihood of heart disease")
 
-# Performance and Visualization sections (kept as placeholders)
-st.subheader('Model Performance')
-image = Image.open(image)
-st.image(image, use_column_width=True)
-
-# Confusion Matrix Visualization (Optional)
-st.subheader('Confusion Matrix')
-image = Image.open(conf_matrix_image)
-st.image(image, use_column_width=True)
