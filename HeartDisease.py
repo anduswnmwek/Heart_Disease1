@@ -11,8 +11,7 @@ st.markdown("**Done by Juhan , Ryan ,Shaurya ,kaushiki**" )
 # Load the trained model
 model_path = 'heart_disease_model1.pkl'
 logreg = joblib.load(model_path)
-conf_matrix_image = 'cm.png'
-image = 'plot.png'
+
 # Sidebar for user input features
 st.sidebar.header("User Input Features")
 
