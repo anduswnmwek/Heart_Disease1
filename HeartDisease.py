@@ -79,3 +79,6 @@ else:
 # Display the prediction probability
 st.write(f"Prediction probability: {prediction_proba[0][1] * 100:.2f}% likelihood of heart disease")
 
+image = 'image (5).png
+image = Image.open(image)
+st.image(image, use_column_width=True)
