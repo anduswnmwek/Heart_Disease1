@@ -78,4 +78,4 @@ else:
 
 # Display the prediction probability
 st.write(f"Prediction probability: {prediction_proba[0][1] * 100:.2f}% likelihood of heart disease")
-
+image='plot.png'
