@@ -83,6 +83,6 @@ image='doc.png'
 
 st.subheader("**Reviews:** ")
 
-image = Image.open(image, width=300)
+image = Image.open(image)
 st.image(image)
 
