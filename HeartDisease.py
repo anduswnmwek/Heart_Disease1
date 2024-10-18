@@ -80,7 +80,7 @@ else:
 st.write(f"Prediction probability: {prediction_proba[0][1] * 100:.2f}% likelihood of heart disease")
 
 image='doc.png'
-
+st.write(------------------------------------------------------------------------------------------------------------------------------------------------------------------)
 st.subheader("**Reviews:** ")
 
 image = Image.open(image)
