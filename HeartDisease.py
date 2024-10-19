@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 import streamlit as st
+
+img='cm.png'
+img = Image.open(img)
+st.sidebar.image(img)
 # Title and description
 st.title("Heart Disease Prediction App")
 st.write("This app predicts heart disease likelihood based on input features from preprocessed data.")
