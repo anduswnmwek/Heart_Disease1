@@ -5,8 +5,8 @@ import numpy as np
 from PIL import Image
 import streamlit as st
 
-
-logo = Image.open('logo-removebg-preview.png')
+try:
+    logo = Image.open('logo-removebg-preview.png')
 except FileNotFoundError:
     st.error("Logo image not found! Please check the file path.")
 st.image(logo, use_column_width=True, height=100)
