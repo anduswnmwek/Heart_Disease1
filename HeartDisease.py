@@ -7,6 +7,8 @@ import streamlit as st
 
 
 logo = Image.open('logo-removebg-preview.png')
+except FileNotFoundError:
+    st.error("Logo image not found! Please check the file path.")
 st.image(logo, use_column_width=True, height=100)
 # Title and description
 st.title("Heart Disease Prediction App")
