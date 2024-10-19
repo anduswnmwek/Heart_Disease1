@@ -7,7 +7,8 @@ import streamlit as st
 
 
 logo = Image.open('logo-removebg-preview.png')
-st.logo(logo)
+resized_logo = logo.resize((100, 100))
+st.image(resized_logo, use_column_width=False)
 # Title and description
 st.title("Heart Disease Prediction App")
 st.write("This app predicts heart disease likelihood based on input features from preprocessed data.")
