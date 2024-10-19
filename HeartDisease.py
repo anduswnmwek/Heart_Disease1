@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 import streamlit as st
 
-img='cm.png'
+img='logo-removebg-preview.png'
 img = Image.open(img)
 st.sidebar.image(img)
 # Title and description
