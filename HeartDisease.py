@@ -5,8 +5,8 @@ import numpy as np
 from PIL import Image
 import streamlit as st
 
-img='logo-removebg-preview.png'
-logo = Image.open(img)
+
+logo = Image.open('logo-removebg-preview.png')
 st.image(logo, use_column_width=True, height=100)
 # Title and description
 st.title("Heart Disease Prediction App")
