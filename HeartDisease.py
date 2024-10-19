@@ -6,7 +6,7 @@ from PIL import Image
 import streamlit as st
 
 img='logo-removebg-preview.png'
-img = Image.open(img)
+logo = Image.open(img)
 st.image(logo, width=100, height=100)
 # Title and description
 st.title("Heart Disease Prediction App")
