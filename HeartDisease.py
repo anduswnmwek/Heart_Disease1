@@ -6,7 +6,7 @@ from PIL import Image
 import streamlit as st
 
 
-logo = Image.open('logo-removebg-preview (1).png')
+logo = Image.open('image (6).png')
 resized_logo = logo.resize((200, 251))#447 × 559
 st.sidebar.image(resized_logo, use_column_width=False)
 # Title and description
