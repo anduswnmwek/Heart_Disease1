@@ -92,3 +92,9 @@ image = Image.open(image)
 resized_image = image.resize((700, 255))
 st.image(resized_image,use_column_width=False) #1014 × 370
 
+i='image (7).png'
+i = Image.open(i)
+r1 = i.resize((700, 182))
+st.image(r1,use_column_width=False) #1014 × 370
+
+
