@@ -90,5 +90,5 @@ st.subheader("**Reviews:** ")
 
 image = Image.open(image)
 resized_image = logo.resize((500, 182))
-st.image(image,use_column_width=False) #1014 × 370
+st.image(resized_image,use_column_width=False) #1014 × 370
 
