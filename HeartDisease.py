@@ -7,7 +7,7 @@ import streamlit as st
 
 
 logo = Image.open('logo-removebg-preview.png')
-resized_logo = logo.resize((447, 559))#447 × 559
+resized_logo = logo.resize((200, 250))#447 × 559
 st.sidebar.image(resized_logo, use_column_width=False)
 # Title and description
 st.title("Heart Disease Prediction App")
