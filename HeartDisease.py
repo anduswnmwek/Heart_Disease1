@@ -89,7 +89,7 @@ st.write('----------------------------------------------------------------------
 st.subheader("**Reviews:** ")
 
 image = Image.open(image)
-#resized_image = image.resize((700, 255))
+
 st.image(image,use_column_width=True) #1014 × 370
 
 
